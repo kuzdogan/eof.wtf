@@ -6,34 +6,20 @@ Uses [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/ma
 
 # Install
 
-Install the submodule:
-
-```
-cd ethereumjs-monorepo
-git submodule update --init
-```
-
-Install dependencies:
-
 ```
 npm install
 ```
 
-Build @ethereumjs/evm:
-
-```
-npm run build --workspace=@ethereumjs/evm
-```
-
-Install main project:
-
-```
-cd ..  # If you were in ethereumjs-monorepo
-npm install
-```
+This will install the submodule and build the @ethereumjs/evm package (see `prepare` script in `package.json` for more details).
 
 # Run
 
 ```
-npm run start
+npm start
+```
+
+# Build
+
+```
+npm run build
 ```
