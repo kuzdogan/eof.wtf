@@ -10,7 +10,7 @@ Uses [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/ma
 npm install
 ```
 
-This will install the submodule and build the @ethereumjs/evm package (see `prepare` script in `package.json` for more details).
+This will install the submodule and build the @ethereumjs/evm package (see `preinstall` script in `package.json` for more details).
 
 # Run
 
