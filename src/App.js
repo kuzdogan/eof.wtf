@@ -40,7 +40,7 @@ function App() {
         <div className="container mx-auto px-32 py-3">
           <div className="flex justify-end">
             <a
-              href="https://github.com/mds1/eof-parser"
+              href="https://github.com/kuzdogan/eof.wtf"
               target="_blank"
               rel="noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
