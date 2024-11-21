@@ -3,4 +3,5 @@ import subcontainers from "./subcontainers";
 import simpleCreate from "./simpleCreate";
 import dataSection from "./dataSection";
 
-export default { example1, subcontainers, simpleCreate, dataSection };
+const bytecodes = { example1, subcontainers, simpleCreate, dataSection };
+export default bytecodes;
