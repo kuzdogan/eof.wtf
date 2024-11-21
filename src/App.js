@@ -133,8 +133,12 @@ function App() {
         {/* ************************** */}
         {/* ********** Result ********** */}
         {/* ************************** */}
-        <h1 className="text-2xl font-semibold my-2 text-center">Result</h1>
-        {parsedEOF && <ParsedEOF parsedEOF={parsedEOF} />}
+        {parsedEOF && (
+          <>
+            <h1 className="text-2xl font-semibold my-2 text-center">Result</h1>
+            <ParsedEOF parsedEOF={parsedEOF} />
+          </>
+        )}
       </div>
 
       {/* ************************** */}
