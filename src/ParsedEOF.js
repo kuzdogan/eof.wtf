@@ -9,19 +9,24 @@ const TextArea = ({ value }) => {
   const hexValue = arrayValue.map((byte) => byte.toString(16).padStart(2, "0"));
 
   return (
-    <div className="flex flex-col">
-      <div className="mb-2 flex justify-end items-center gap-3 text-xs">
-        <span className={`font-medium text-white ${!divideBytes && "opacity-50"}`}>Divide Bytes</span>
-        <label className="relative inline-flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            checked={!divideBytes}
-            onChange={() => setDivideBytes(!divideBytes)}
-            className="sr-only peer"
-          />
-          <div className="w-8 h-4 bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-gray-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[5px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-gray-700"></div>
-        </label>
-        <span className={`font-medium text-white ${divideBytes && "opacity-50"}`}>Merge Bytes</span>
+    <div className="flex flex-col mt-4">
+      <div className="mb-1 flex flex-row justify-between">
+        <div className="flex items-center gap-1 text-xs text-gray-400">
+          <span>Length: {value.length} bytes</span>
+        </div>
+        <div className="flex justify-end items-center gap-3 text-xs">
+          <span className={`font-medium text-white ${!divideBytes && "opacity-50"}`}>Divide Bytes</span>
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              checked={!divideBytes}
+              onChange={() => setDivideBytes(!divideBytes)}
+              className="sr-only peer"
+            />
+            <div className="w-8 h-4 bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-gray-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[5px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-gray-700"></div>
+          </label>
+          <span className={`font-medium text-white ${divideBytes && "opacity-50"}`}>Merge Bytes</span>
+        </div>
       </div>
       <textarea
         className="text-sm w-full min-h-24 bg-gray-800 font-mono p-2 rounded border border-gray-700"
@@ -88,6 +93,9 @@ const ParsedEOF = ({ parsedEOF, identifier = "0" }) => {
     <div className="mb-8">
       <pre className={`${bgColor} p-4 rounded-lg overflow-x-auto`}>
         <h1 className={`text-2xl font-semibold ${bgColor}`}>Container {identifier}</h1>
+        <p className="text-xs text-gray-400">
+          Length: {parsedEOF.header.buffer.length + parsedEOF.body.buffer.length} bytes
+        </p>
 
         {/* ************************** */}
         {/* ********** Header ********** */}
