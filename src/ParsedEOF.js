@@ -163,7 +163,7 @@ const ParsedEOF = ({ parsedEOF, identifier = "0" }) => {
                 className="mt-4 border border-gray-700 rounded-lg p-4 overflow-x-auto"
                 key={"typedSection-" + identifier + "-" + index}
               >
-                <h4 className="text-sm">Types Section {index + 1}</h4>
+                <h4 className="text-sm">Types Section {index}</h4>
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-gray-700">
@@ -191,7 +191,7 @@ const ParsedEOF = ({ parsedEOF, identifier = "0" }) => {
             <h3 className="mt-8">Code Sections</h3>
             {parsedEOF.body.codeSections.map((codeSectionUint8Array, index) => (
               <div className="ml-4" key={"codeSection-" + identifier + "-" + index}>
-                <h4 className="mt-2 text-sm">Code Section {index + 1}</h4>
+                <h4 className="mt-2 text-sm">Code Section {index}</h4>
                 <div className="mt-2">
                   <TextArea value={codeSectionUint8Array} />
                 </div>
