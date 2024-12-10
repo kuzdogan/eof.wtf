@@ -176,9 +176,6 @@ const ParsedEOF = ({ parsedEOF, identifier = "0" }) => {
                   <tbody>
                     <EOFRow field={bodyFormat.inputs} value={section.inputs} />
                     <EOFRow field={bodyFormat.outputs} value={section.outputs} />
-                    <tr className="text-red-500">
-                      <td>maxStackHeight is wrong?</td>
-                    </tr>
                     <EOFRow field={bodyFormat.max_stack_height} value={section.maxStackHeight} />
                   </tbody>
                 </table>
